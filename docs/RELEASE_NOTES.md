@@ -16,3 +16,6 @@
 ## 2026-01-08 15:39
 - feat: scaffold backend with postgres and sqlserver (branch: dev)
 
+## 2026-01-08 15:52
+- docs: add handoff (branch: dev)
+
