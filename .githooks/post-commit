@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+if ! git remote get-url origin >/dev/null 2>&1; then
+  exit 0
+fi
+
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+if [ "$branch" != "dev" ]; then
+  exit 0
+fi
+
+if ! git push -u origin dev; then
+  echo "post-commit: push failed; run git push origin dev" >&2
+fi
