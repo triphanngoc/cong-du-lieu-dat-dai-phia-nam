@@ -5,11 +5,40 @@ if ! git remote get-url origin >/dev/null 2>&1; then
   exit 0
 fi
 
-branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)
+branch=$(printf "%s" "$branch" | tr -d '\r' | tr -d '\n')
+if [ -z "$branch" ] || [ "$branch" = "HEAD" ]; then
+  branch="dev"
+fi
+
 if [ "$branch" != "dev" ]; then
   exit 0
 fi
 
-if ! git push -u origin dev; then
-  echo "post-commit: push failed; run git push origin dev" >&2
+subject=$(git log -1 --pretty=%s)
+if echo "$subject" | grep -qi "\[skip-release-notes\]"; then
+  if ! git push -u origin dev; then
+    echo "post-commit: push failed; run git push origin dev" >&2
+  fi
+  exit 0
 fi
+
+if echo "$subject" | grep -qi "^Merge "; then
+  if ! git push -u origin dev; then
+    echo "post-commit: push failed; run git push origin dev" >&2
+  fi
+  exit 0
+fi
+
+notes_file="docs/RELEASE_NOTES.md"
+if [ ! -f "$notes_file" ]; then
+  printf "# Release Notes\n\n" > "$notes_file"
+fi
+
+date=$(date "+%Y-%m-%d %H:%M")
+summary=$(printf "%s" "$subject" | tr -d '\r')
+
+printf "## %s\n- %s (branch: %s)\n\n" "$date" "$summary" "$branch" >> "$notes_file"
+
+git add "$notes_file"
+git commit -m "chore: update release notes [skip-release-notes]"
