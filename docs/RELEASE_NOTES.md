@@ -19,3 +19,6 @@
 ## 2026-01-08 15:52
 - docs: add handoff (branch: dev)
 
+## 2026-01-08 16:19
+- Add API controllers for auth catalog admin payment (branch: dev)
+
