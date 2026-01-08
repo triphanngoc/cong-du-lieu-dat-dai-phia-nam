@@ -23,7 +23,11 @@ if [ -z "$summary" ]; then
 fi
 
 date=$(date "+%Y-%m-%d %H:%M")
-branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)
+branch=$(printf "%s" "$branch" | tr -d '\r' | tr -d '\n')
+if [ -z "$branch" ] || [ "$branch" = "HEAD" ]; then
+  branch="dev"
+fi
 
 printf "## %s\n- %s (branch: %s)\n\n" "$date" "$summary" "$branch" >> "$notes_file"
 
