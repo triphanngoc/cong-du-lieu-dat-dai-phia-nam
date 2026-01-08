@@ -10,3 +10,6 @@
 ## 2026-01-08 14:30
 - chore: update release notes automation (branch: dev)
 
+## 2026-01-08 14:42
+- chore: fix json encoding (branch: dev)
+
