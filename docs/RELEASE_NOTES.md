@@ -13,3 +13,6 @@
 ## 2026-01-08 14:42
 - chore: fix json encoding (branch: dev)
 
+## 2026-01-08 15:39
+- feat: scaffold backend with postgres and sqlserver (branch: dev)
+
