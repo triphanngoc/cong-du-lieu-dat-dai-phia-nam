@@ -4,7 +4,7 @@ import { processSteps, systemModules } from '../data/siteData';
 
 export default function SystemOverview() {
   return (
-    <Box className="section" id="gioi-thieu">
+    <Box className="section" id="he-thong">
       <Container maxWidth="lg">
         <Stack spacing={4}>
           <SectionHeader

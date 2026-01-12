@@ -136,6 +136,278 @@ a {
   animation-delay: 0.48s;
 }
 
+.product-page {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(11, 61, 145, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 22%, rgba(14, 124, 134, 0.08), transparent 45%),
+    linear-gradient(180deg, #f4f1ea 0%, #ffffff 45%, #f8f6f0 100%);
+}
+
+.product-banner {
+  padding: 32px 0 12px;
+}
+
+.product-crumbs {
+  color: var(--color-muted);
+}
+
+.product-share {
+  border: 1px solid rgba(11, 61, 145, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-blue);
+}
+
+.product-shell {
+  padding-top: 24px;
+}
+
+.product-sidebar {
+  border: 1px solid rgba(11, 61, 145, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.product-sidebar-title {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.12), rgba(14, 124, 134, 0.08));
+  border-bottom: 1px solid rgba(11, 61, 145, 0.12);
+}
+
+.product-group-button {
+  justify-content: space-between;
+  gap: 12px;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+}
+
+.product-group-button.Mui-selected {
+  background: rgba(11, 61, 145, 0.08);
+  border-left-color: var(--color-blue);
+}
+
+.product-group-button.Mui-selected .MuiTypography-root {
+  color: var(--color-blue);
+}
+
+.product-toolbar {
+  border: 1px solid rgba(11, 61, 145, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.product-view-toggle {
+  border: 1px solid rgba(11, 61, 145, 0.18);
+  border-radius: 12px;
+}
+
+.product-card {
+  border: 1px dashed rgba(11, 61, 145, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 16px 32px rgba(10, 35, 80, 0.06);
+}
+
+.product-thumb {
+  position: relative;
+  height: 180px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(11, 61, 145, 0.06), rgba(14, 124, 134, 0.18)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 61, 145, 0.12) 0,
+      rgba(11, 61, 145, 0.12) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(14, 124, 134, 0.12) 0,
+      rgba(14, 124, 134, 0.12) 1px,
+      transparent 1px,
+      transparent 18px
+    );
+}
+
+.product-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 12% 10%;
+  border-radius: 16px;
+  border: 2px dashed rgba(11, 61, 145, 0.25);
+}
+
+.product-thumb.tone-2 {
+  background:
+    linear-gradient(135deg, rgba(200, 146, 42, 0.12), rgba(11, 61, 145, 0.18)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(11, 61, 145, 0.1) 0,
+      rgba(11, 61, 145, 0.1) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(200, 146, 42, 0.16) 0,
+      rgba(200, 146, 42, 0.16) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+}
+
+.product-thumb.tone-3 {
+  background:
+    linear-gradient(135deg, rgba(14, 124, 134, 0.1), rgba(200, 146, 42, 0.14)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(14, 124, 134, 0.12) 0,
+      rgba(14, 124, 134, 0.12) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(11, 61, 145, 0.1) 0,
+      rgba(11, 61, 145, 0.1) 1px,
+      transparent 1px,
+      transparent 16px
+    );
+}
+
+.product-thumb.tone-4 {
+  background:
+    linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(200, 146, 42, 0.2)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(200, 146, 42, 0.12) 0,
+      rgba(200, 146, 42, 0.12) 1px,
+      transparent 1px,
+      transparent 15px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(14, 124, 134, 0.1) 0,
+      rgba(14, 124, 134, 0.1) 1px,
+      transparent 1px,
+      transparent 17px
+    );
+}
+
+.admin-page {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(14, 124, 134, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 18%, rgba(11, 61, 145, 0.08), transparent 45%),
+    linear-gradient(180deg, #f4f1ea 0%, #ffffff 50%, #f8f6f0 100%);
+}
+
+.admin-banner {
+  padding: 32px 0 8px;
+}
+
+.admin-crumbs {
+  color: var(--color-muted);
+}
+
+.admin-shell {
+  padding-top: 24px;
+}
+
+.admin-sidebar {
+  border: 1px solid rgba(11, 61, 145, 0.16);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.admin-sidebar-title {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.12), rgba(14, 124, 134, 0.08));
+  border-bottom: 1px solid rgba(11, 61, 145, 0.12);
+}
+
+.admin-nav-button {
+  border-left: 3px solid transparent;
+  border-radius: 0;
+}
+
+.admin-nav-button.Mui-selected {
+  background: rgba(11, 61, 145, 0.08);
+  border-left-color: var(--color-blue);
+}
+
+.admin-status-card {
+  padding: 16px;
+  border: 1px solid rgba(11, 61, 145, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.admin-section {
+  padding: 24px;
+  border: 1px solid rgba(11, 61, 145, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 16px 36px rgba(10, 35, 80, 0.06);
+}
+
+.admin-summary-card {
+  border: 1px dashed rgba(11, 61, 145, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.admin-summary-card.tone-warning {
+  border-color: rgba(200, 146, 42, 0.4);
+  background: rgba(200, 146, 42, 0.08);
+}
+
+.admin-summary-card.tone-primary {
+  border-color: rgba(11, 61, 145, 0.4);
+  background: rgba(11, 61, 145, 0.06);
+}
+
+.admin-summary-card.tone-success {
+  border-color: rgba(47, 125, 74, 0.4);
+  background: rgba(47, 125, 74, 0.08);
+}
+
+.admin-summary-card.tone-secondary {
+  border-color: rgba(14, 124, 134, 0.35);
+  background: rgba(14, 124, 134, 0.08);
+}
+
+.admin-table {
+  border: 1px dashed rgba(11, 61, 145, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.admin-table .MuiTableCell-head {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  background: rgba(11, 61, 145, 0.06);
+}
+
+.admin-table .MuiTableCell-root {
+  border-bottom: 1px dashed rgba(11, 61, 145, 0.12);
+}
+
+.admin-setting-row {
+  border: 1px solid rgba(11, 61, 145, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.admin-log-item {
+  border: 1px solid rgba(11, 61, 145, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
 @keyframes riseIn {
   from {
     opacity: 0;
@@ -177,5 +449,17 @@ a {
 
   .map-panel {
     height: 240px;
+  }
+
+  .product-banner {
+    padding: 24px 0 8px;
+  }
+
+  .product-thumb {
+    height: 160px;
+  }
+
+  .admin-banner {
+    padding: 24px 0 8px;
   }
 }

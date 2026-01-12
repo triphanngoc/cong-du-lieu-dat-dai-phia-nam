@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import {
   Box,
   Button,
@@ -15,9 +15,9 @@ import { navItems } from '../data/siteData';
 export default function MainNav() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   const open = Boolean(anchorEl) && activeIndex !== null;
   const activeItem = activeIndex !== null ? navItems[activeIndex] : null;
+  const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
 
   const handleOpen = (event: React.MouseEvent<HTMLElement>, index: number) => {
     if (!navItems[index].children) {
@@ -42,13 +42,13 @@ export default function MainNav() {
     >
       <Container maxWidth="lg">
         <Stack direction="row" spacing={1} alignItems="center" py={1} sx={{ overflowX: 'auto' }}>
-          <Button href="#" sx={{ minWidth: 44, borderRadius: 2 }} startIcon={<HomeOutlinedIcon />}>
+          <Button href="/" sx={{ minWidth: 44, borderRadius: 2 }} startIcon={<HomeOutlinedIcon />}>
             <Typography variant="button">Trang chủ</Typography>
           </Button>
           {navItems.map((item, index) => (
             <Button
               key={item.label}
-              href={item.children ? undefined : item.href}
+              href={item.children ? undefined : resolveHref(item.href)}
               onClick={(event) => handleOpen(event, index)}
               endIcon={item.children ? <KeyboardArrowDownIcon fontSize="small" /> : undefined}
               sx={{ whiteSpace: 'nowrap' }}
@@ -73,7 +73,7 @@ export default function MainNav() {
         }}
       >
         {activeItem?.children?.map((child) => (
-          <MenuItem key={child.label} component="a" href={child.href} onClick={handleClose}>
+          <MenuItem key={child.label} component="a" href={resolveHref(child.href)} onClick={handleClose}>
             {child.label}
           </MenuItem>
         ))}

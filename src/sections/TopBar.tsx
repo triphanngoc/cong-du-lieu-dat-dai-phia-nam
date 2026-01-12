@@ -1,7 +1,9 @@
-﻿import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { Box, Container, Link, Stack, Typography } from '@mui/material';
 import { agency, topLinks } from '../data/siteData';
 
 export default function TopBar() {
+  const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
+
   return (
     <Box
       sx={{
@@ -28,7 +30,13 @@ export default function TopBar() {
           </Stack>
           <Stack direction="row" spacing={2} flexWrap="wrap">
             {topLinks.map((link) => (
-              <Link key={link.label} href={link.href} underline="none" color="text.secondary" variant="caption">
+              <Link
+                key={link.label}
+                href={resolveHref(link.href)}
+                underline="none"
+                color="text.secondary"
+                variant="caption"
+              >
                 {link.label}
               </Link>
             ))}

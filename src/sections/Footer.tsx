@@ -42,7 +42,7 @@ export default function Footer() {
         </Grid>
         <Box sx={{ mt: 4, pt: 3, borderTop: '1px solid rgba(255, 255, 255, 0.15)' }}>
           <Typography variant="caption">
-            © 2026 Trung tâm Dữ liệu và Thông tin đất đai (Chi nhánh văn phòng Phía Nam). All rights reserved.
+            © 2026 Trung tâm Dữ liệu và Thông tin đất đai (Văn phòng Phía Nam). All rights reserved.
           </Typography>
         </Box>
       </Container>

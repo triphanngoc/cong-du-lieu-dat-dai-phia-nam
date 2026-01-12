@@ -1,6 +1,6 @@
 ﻿export const agency = {
-  name: 'Cổng Dữ liệu Đất đai Phía Nam',
-  fullName: 'Trung tâm Dữ liệu và Thông tin đất đai (Chi nhánh văn phòng Phía Nam)',
+  name: 'Dữ liệu tổng hợp',
+  fullName: 'Trung tâm Dữ liệu và Thông tin đất đai (Văn phòng Phía Nam)',
   tagline: 'Hệ thống cung cấp dữ liệu thông tin đất đai',
   hotline: '1900 9999',
   email: 'support@ttdldd-phianam.gov.vn',
@@ -44,6 +44,7 @@ export const navItems = [
       { label: 'Mô hình số độ cao', href: '#du-lieu' },
     ],
   },
+  { label: 'Sản phẩm', href: '/san-pham' },
   {
     label: 'Thông báo dữ liệu',
     href: '#thong-bao',
@@ -54,7 +55,286 @@ export const navItems = [
     ],
   },
   { label: 'Dịch vụ công', href: '#dich-vu' },
+  { label: 'Quản trị', href: '/admin' },
   { label: 'Liên hệ', href: '#lien-he' },
+];
+
+export const introFocus = [
+  {
+    title: 'Chuẩn hóa thông tin',
+    detail: 'Đồng bộ dữ liệu, metadata và quy chuẩn kỹ thuật theo định hướng quốc gia.',
+  },
+  {
+    title: 'Dịch vụ một cửa',
+    detail: 'Số hóa toàn bộ quy trình nộp hồ sơ, thẩm định, thanh toán và cấp dữ liệu.',
+  },
+  {
+    title: 'Hệ sinh thái mở',
+    detail: 'Kết nối API liên thông, chia sẻ dữ liệu và tích hợp hệ thống nghiệp vụ.',
+  },
+];
+
+export const introHighlights = [
+  {
+    title: 'Sứ mệnh',
+    description: 'Tập trung nguồn dữ liệu đất đai chuẩn hóa phục vụ quản lý và khai thác minh bạch.',
+  },
+  {
+    title: 'Phạm vi phục vụ',
+    description: 'Hỗ trợ cơ quan, tổ chức và người dân toàn khu vực phía Nam truy cập dữ liệu thống nhất.',
+  },
+  {
+    title: 'Dữ liệu tích hợp',
+    description: 'Bản đồ nền, địa chính, ảnh hàng không, quy hoạch và thống kê chuyên ngành.',
+  },
+  {
+    title: 'An toàn & tuân thủ',
+    description: 'Phân quyền, giám sát truy cập và đảm bảo tuân thủ quy định pháp lý.',
+  },
+];
+
+export const productGroups = [
+  { id: 'thanh-qua-trac-dia', label: 'Thành quả trắc địa', count: 128 },
+  { id: 'so-do-ghi-chu-diem', label: 'Số đồ ghi chú điểm', count: 42 },
+  { id: 'anh-hang-khong', label: 'Ảnh hàng không', count: 96 },
+  { id: 'ban-do-dia-hinh', label: 'Bản đồ địa hình quốc gia', count: 214 },
+  { id: 'csdl-dia-ly', label: 'Cơ sở dữ liệu nền địa lý quốc gia', count: 68 },
+  { id: 'mo-hinh-so-do-cao', label: 'Mô hình số độ cao', count: 51 },
+  { id: 'dia-danh', label: 'Địa danh', count: 36 },
+];
+
+export const productItems = [
+  {
+    title: 'F-48-67-(94-b)',
+    group: 'ban-do-dia-hinh',
+    publishedAt: '2015-04-17T14:09:00',
+    publishedLabel: '17/04/2015 | 14:09',
+    views: 112110,
+    category: 'Bản đồ địa hình VN2000',
+    tone: 'tone-1',
+  },
+  {
+    title: 'F-48-68-(81-c)',
+    group: 'ban-do-dia-hinh',
+    publishedAt: '2015-04-17T15:49:00',
+    publishedLabel: '17/04/2015 | 15:49',
+    views: 99427,
+    category: 'Bản đồ địa hình VN2000',
+    tone: 'tone-2',
+  },
+  {
+    title: 'F-48-68-(81-e)',
+    group: 'ban-do-dia-hinh',
+    publishedAt: '2015-04-17T15:50:00',
+    publishedLabel: '17/04/2015 | 15:50',
+    views: 99810,
+    category: 'Bản đồ địa hình VN2000',
+    tone: 'tone-3',
+  },
+  {
+    title: 'F-48-69-(86-a)',
+    group: 'ban-do-dia-hinh',
+    publishedAt: '2015-04-18T09:20:00',
+    publishedLabel: '18/04/2015 | 09:20',
+    views: 86540,
+    category: 'Bản đồ địa hình VN2000',
+    tone: 'tone-4',
+  },
+];
+
+export const adminSections = [
+  { id: 'admin-tong-quan', label: 'Tổng quan' },
+  { id: 'admin-san-pham', label: 'Sản phẩm' },
+  { id: 'admin-thu-tuc', label: 'Thủ tục & DVC' },
+  { id: 'admin-ho-so', label: 'Hồ sơ' },
+  { id: 'admin-thanh-toan', label: 'Thanh toán' },
+  { id: 'admin-nguoi-dung', label: 'Người dùng' },
+  { id: 'admin-cau-hinh', label: 'Cấu hình' },
+  { id: 'admin-audit', label: 'Nhật ký' },
+];
+
+export const adminSummary = [
+  { label: 'Hồ sơ mới', value: '128', detail: '24 giờ gần nhất', tone: 'warning' },
+  { label: 'Hồ sơ đang xử lý', value: '64', detail: 'Đúng hạn 98%', tone: 'primary' },
+  { label: 'Giao dịch thành công', value: '312', detail: 'Tháng hiện tại', tone: 'success' },
+  { label: 'Sản phẩm đang bán', value: '214', detail: 'Danh mục địa hình', tone: 'secondary' },
+];
+
+export const adminSystemStatus = [
+  { label: 'Kết nối API', status: 'Ổn định', tone: 'success' },
+  { label: 'Dung lượng lưu trữ', status: '68% sử dụng', tone: 'warning' },
+  { label: 'Bản ghi nhật ký', status: 'Thu thập liên tục', tone: 'primary' },
+];
+
+export const adminProducts = [
+  {
+    code: 'SP-001',
+    title: 'F-48-67-(94-b)',
+    category: 'Bản đồ địa hình VN2000',
+    status: 'Đang bán',
+    updatedAt: '08/01/2026',
+    size: '1.2 GB',
+    price: '2.500.000 đ',
+  },
+  {
+    code: 'SP-002',
+    title: 'F-48-68-(81-c)',
+    category: 'Bản đồ địa hình VN2000',
+    status: 'Đang bán',
+    updatedAt: '08/01/2026',
+    size: '950 MB',
+    price: '2.350.000 đ',
+  },
+  {
+    code: 'SP-003',
+    title: 'UAV-THU-DUC-2024',
+    category: 'Ảnh hàng không',
+    status: 'Tạm dừng',
+    updatedAt: '06/01/2026',
+    size: '2.8 GB',
+    price: '3.800.000 đ',
+  },
+  {
+    code: 'SP-004',
+    title: 'DEM-DONG-NAI-5M',
+    category: 'Mô hình số độ cao',
+    status: 'Đang bán',
+    updatedAt: '05/01/2026',
+    size: '4.1 GB',
+    price: '4.900.000 đ',
+  },
+];
+
+export const adminProcedures = [
+  {
+    code: 'TT-12',
+    name: 'Cấp dữ liệu bản đồ địa hình',
+    level: 'Mức 4',
+    status: 'Hoạt động',
+    updatedAt: '05/01/2026',
+  },
+  {
+    code: 'TT-18',
+    name: 'Cấp dữ liệu ảnh hàng không',
+    level: 'Mức 4',
+    status: 'Hoạt động',
+    updatedAt: '03/01/2026',
+  },
+  {
+    code: 'TT-22',
+    name: 'Cung cấp mô hình số độ cao',
+    level: 'Mức 3',
+    status: 'Tạm dừng',
+    updatedAt: '28/12/2025',
+  },
+];
+
+export const adminCases = [
+  {
+    code: 'HS-2026-0184',
+    requester: 'Nguyễn Minh Anh',
+    procedure: 'Cấp dữ liệu ảnh hàng không',
+    status: 'Đang thẩm định',
+    dueDate: '12/01/2026',
+  },
+  {
+    code: 'HS-2026-0179',
+    requester: 'Công ty Đại Dương',
+    procedure: 'Cấp dữ liệu bản đồ địa hình',
+    status: 'Chờ bổ sung',
+    dueDate: '10/01/2026',
+  },
+  {
+    code: 'HS-2026-0172',
+    requester: 'Lê Thanh Tâm',
+    procedure: 'Cung cấp mô hình số độ cao',
+    status: 'Hoàn tất',
+    dueDate: '08/01/2026',
+  },
+];
+
+export const adminPayments = [
+  {
+    code: 'PAY-9832',
+    caseCode: 'HS-2026-0184',
+    amount: '3.200.000 đ',
+    method: 'VNPAY',
+    status: 'Đã thanh toán',
+  },
+  {
+    code: 'PAY-9815',
+    caseCode: 'HS-2026-0179',
+    amount: '2.750.000 đ',
+    method: 'Chuyển khoản',
+    status: 'Chờ đối soát',
+  },
+  {
+    code: 'PAY-9781',
+    caseCode: 'HS-2026-0172',
+    amount: '4.500.000 đ',
+    method: 'VNPT Pay',
+    status: 'Đã thanh toán',
+  },
+];
+
+export const adminUsers = [
+  {
+    name: 'Trần Phương Linh',
+    role: 'Quản trị viên',
+    unit: 'TTDLĐĐ',
+    status: 'Hoạt động',
+  },
+  {
+    name: 'Nguyễn Hữu Thành',
+    role: 'Cán bộ thẩm định',
+    unit: 'Sở TN&MT',
+    status: 'Hoạt động',
+  },
+  {
+    name: 'Lê Quỳnh Chi',
+    role: 'Kế toán',
+    unit: 'TTDLĐĐ',
+    status: 'Tạm khóa',
+  },
+];
+
+export const adminSettings = [
+  {
+    key: 'autoReceive',
+    label: 'Tự động tiếp nhận hồ sơ đủ điều kiện',
+    description: 'Hồ sơ hợp lệ được tạo biên nhận và chuyển sang thẩm định.',
+    enabled: true,
+  },
+  {
+    key: 'notifyPayment',
+    label: 'Gửi thông báo khi có giao dịch',
+    description: 'Thông báo qua email và dashboard cho các khoản thanh toán.',
+    enabled: true,
+  },
+  {
+    key: 'archiveAfterComplete',
+    label: 'Lưu trữ hồ sơ sau khi hoàn tất',
+    description: 'Chuyển hồ sơ đã xử lý sang kho lưu trữ điện tử.',
+    enabled: false,
+  },
+];
+
+export const adminAuditLogs = [
+  {
+    time: '08:15 08/01/2026',
+    actor: 'admin.tndl',
+    action: 'Cập nhật trạng thái hồ sơ HS-2026-0184 sang "Đang thẩm định".',
+  },
+  {
+    time: '16:42 07/01/2026',
+    actor: 'ke.toan',
+    action: 'Đối soát giao dịch PAY-9815 - chuyển khoản.',
+  },
+  {
+    time: '11:30 07/01/2026',
+    actor: 'canbo.hoso',
+    action: 'Yêu cầu bổ sung tài liệu cho hồ sơ HS-2026-0179.',
+  },
 ];
 
 export const quickActions = [

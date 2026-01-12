@@ -1,6 +1,6 @@
 ﻿# Cổng Dữ liệu Đất đai Phía Nam
 
-Trang chủ giao diện cho Trung tâm Dữ liệu và Thông tin đất đai (Chi nhánh văn phòng Phía Nam),
+Trang chủ giao diện cho Trung tâm Dữ liệu và Thông tin đất đai (Văn phòng Phía Nam),
 được thiết kế theo Material Design và phù hợp cơ quan nhà nước.
 
 ## Mục tiêu
