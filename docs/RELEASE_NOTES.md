@@ -22,3 +22,6 @@
 ## 2026-01-08 16:19
 - Add API controllers for auth catalog admin payment (branch: dev)
 
+## 2026-01-12 17:08
+- Update frontend pages and API startup (branch: dev)
+
